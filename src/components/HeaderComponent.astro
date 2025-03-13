@@ -1,0 +1,26 @@
+---
+import Logo from './LogoComponent.astro';
+---
+
+<header class="header flex  items-center">
+
+    <Logo />
+
+    <nav class="flex flex-row gap-4">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/experience">Experience</a>
+        <a href="/contact">Projects</a>
+        <a href="/">Contact</a>        
+    </nav>
+
+    <div class="flex items-center space-x-4">
+        <a href="/">
+            <img src="src/assets/github-svgrepo-com.svg" alt="GitHub" class="w-6 h-6" />
+        </a>
+        <a href="/">
+            <img src="src/assets/linkedin-svgrepo-com.svg" alt="LinkedIn" class="w-6 h-6" />
+        </a>
+    </div>
+
+</header>
