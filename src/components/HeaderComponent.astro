@@ -3,12 +3,13 @@ import Logo from "./LogoComponent.astro";
 ---
 
 <header
-    class="landing-header flex justify-around items-center rounded-lg p-4 absolute w-full z-10 top-3"
+    id="header"
+    class="landing-header flex justify-around items-center p-4 fixed transition-shadow w-full z-10 bg-[#2a3136]"
 >
     <Logo />
 
     <nav
-        class="px-8 rounded-2xl bg-cyan-500 text-sm font-semibold text-white shadow-lg shadow-cyan-500/50 [&>ul>li>a]:transition [&>ul>li>a]:duration-300 [&>ul>li>a]:hover:text-white-500 [&>ul>li>a]:hover:font-bold [&>ul>li>a]:hover:scale-105 [&>ul>li>a]:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]"
+        class="px-8 rounded-2xl bg-cyan-500 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30 [&>ul>li>a]:transition [&>ul>li>a]:duration-300 [&>ul>li>a]:hover:text-white-500 [&>ul>li>a]:hover:font-bold [&>ul>li>a]:hover:scale-105 [&>ul>li>a]:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]"
     >
         <ul
             class="flex flex-row gap-5 [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-3"
@@ -22,7 +23,7 @@ import Logo from "./LogoComponent.astro";
     </nav>
 
     <nav class="flex gap-4 [&>a>svg]:text-white [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:text-cyan-500 [&>a>svg]:hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] [&>a>svg]:hover:scale-105">
-        <a href="https://github.com/nicoToscano" aria-label="GitHub">
+        <a href="https://github.com/nicoToscano" target="_blank" aria-label="GitHub">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -38,7 +39,7 @@ import Logo from "./LogoComponent.astro";
             ></path>
             </svg>
         </a>
-        <a href="https://www.linkedin.com/in/nicotoscano/" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/nicotoscano/" target="_blank" aria-label="LinkedIn">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -74,4 +75,23 @@ import Logo from "./LogoComponent.astro";
     </nav>
 
 </header>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10 && header) {
+            header.classList.add("shadow-[0_0_8px_rgba(0,255,255,0.3)]");
+        } else {
+            if (header) {
+                header.classList.remove("shadow-[0_0_8px_rgba(0,255,255,0.3)]");
+            }
+        }
+    });
+});
+
+</script>
+
 
