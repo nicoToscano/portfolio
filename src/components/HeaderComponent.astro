@@ -8,7 +8,7 @@ import Logo from "./LogoComponent.astro";
     <Logo />
 
     <nav
-        class="px-8 rounded-2xl bg-cyan-500 text-sm font-semibold text-white shadow-lg shadow-cyan-500/50"
+        class="px-8 rounded-2xl bg-cyan-500 text-sm font-semibold text-white shadow-lg shadow-cyan-500/50 [&>ul>li>a]:transition [&>ul>li>a]:duration-300 [&>ul>li>a]:hover:text-white-500 [&>ul>li>a]:hover:font-bold [&>ul>li>a]:hover:scale-105 [&>ul>li>a]:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]"
     >
         <ul
             class="flex flex-row gap-5 [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-3"
@@ -21,7 +21,7 @@ import Logo from "./LogoComponent.astro";
         </ul>
     </nav>
 
-    <nav class="flex gap-4 [&>a]:text-white">
+    <nav class="flex gap-4 [&>a>svg]:text-white [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:text-cyan-500 [&>a>svg]:hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] [&>a>svg]:hover:scale-105">
         <a href="/">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
