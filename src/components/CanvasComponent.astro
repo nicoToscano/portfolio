@@ -1,0 +1,91 @@
+<!-- Hecho con GitHub Copilot -->
+
+<!-- Fondo de estrellas -->
+<canvas id="starsCanvas" class="fixed inset-0"></canvas>
+
+<script>
+  // Ejecuta la función cuando la ventana se haya cargado completamente
+  window.onload = function () {
+    // Obtiene el elemento canvas del DOM
+    const canvas = document.getElementById("starsCanvas");
+    if (!(canvas instanceof HTMLCanvasElement)) {
+      console.error("El elemento con ID 'starsCanvas' no es un canvas.");
+      return;
+    }
+
+    // Obtiene el contexto 2D del canvas para dibujar
+    const ctx = canvas.getContext("2d");
+
+    // Define un array para almacenar las estrellas
+    const stars: { x: number; y: number; size: number; speed: number }[] = [];
+    const numStars = 500; // Número de estrellas
+    let scrollY = 0; // Variable para almacenar la posición de desplazamiento vertical
+
+    // Función para redimensionar el canvas al tamaño de la ventana
+    function resizeCanvas() {
+      if (canvas) {
+        if (canvas instanceof HTMLCanvasElement) {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          createStars(); // Crea las estrellas después de redimensionar
+          drawStars(); // Dibuja las estrellas después de redimensionar
+        }
+      }
+    }
+
+    // Función para crear las estrellas con posiciones y velocidades aleatorias
+    function createStars() {
+      if (!(canvas instanceof HTMLCanvasElement)) return;
+      stars.length = 0; // Vacía el array de estrellas
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width, // Posición x aleatoria
+          y: Math.random() * canvas.height, // Posición y aleatoria
+          size: Math.random() * 2, // Tamaño aleatorio
+          speed: Math.random() * 0.1 + 0.1, // Velocidad aleatoria
+        });
+      }
+    }
+
+    // Función para dibujar las estrellas en el canvas
+    function drawStars() {
+      if (!(canvas instanceof HTMLCanvasElement)) return;
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpia el canvas
+
+      // Dibuja cada estrella
+      for (let star of stars) {
+        ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; // Color de la estrella
+        ctx.shadowBlur = 4; // Desenfoque de la sombra
+        ctx.shadowColor = "white"; // Color de la sombra
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2); // Dibuja un círculo para la estrella
+        ctx.fill();
+      }
+    }
+
+    // Función para actualizar la posición de las estrellas
+    function updateStars() {
+      if (!(canvas instanceof HTMLCanvasElement)) return;
+      for (let star of stars) {
+        star.y += star.speed; // Incrementa la posición y de la estrella según su velocidad
+        if (star.y > canvas.height) {
+          star.y = 0; // Reinicia la posición y de la estrella si sale del canvas
+          star.x = Math.random() * canvas.width; // Asigna una nueva posición x aleatoria
+        }
+      }
+      drawStars(); // Dibuja las estrellas actualizadas
+    }
+
+    // Función para animar las estrellas
+    function animate() {
+      updateStars(); // Actualiza las estrellas
+      requestAnimationFrame(animate); // Llama a la función de animación en el siguiente frame
+    }
+
+    // Añade un evento para redimensionar el canvas cuando la ventana cambia de tamaño
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas(); // Redimensiona el canvas inicialmente
+    animate(); // Inicia la animación
+  };
+</script>
