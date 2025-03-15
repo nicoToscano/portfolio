@@ -1,52 +1,50 @@
 ---
-
+import { Image } from "astro:assets";
+import myImage from "../assets/profile.png";
 ---
 
-<div
-    class="flex items-center justify-center max-w-7xl mx-auto h-[600px] pt-50"
->
-    <div
-        class="w-2/4 text-center text-white h-full flex flex-col justify-center"
+<div class="flex items-center justify-center max-w-7xl mx-auto h-[600px] pt-50 mb-20">
+  <div class="w-2/4 text-center text-white h-full flex flex-col justify-center">
+    <h1 class="hover:cursor-pointer font-[800] text-7xl">
+      Hola, soy <span
+        class="text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.7)]"
+        >Nicolás</span
+      >.
+    </h1>
+    <p class="font-[400] text-2xl mt-8 opacity-80">
+      Soy un desarrollador web y estudiante de ingeniería en sistemas. Me
+      encanta aprender cosas nuevas y compartir conocimientos.
+    </p>
+    <span
+      class="flex items-center justify-center gap-2 mt-4 text-lg opacity-90 hover:scale-105"
     >
-        <h1
-            class="hover:cursor-pointer font-[800] text-7xl"
-        >
-            Hola, soy <span class="text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.7)]">Nicolás</span>.
-        </h1>
-        <p class="font-[400] text-2xl mt-8 opacity-80">
-            Soy un desarrollador web y estudiante de ingeniería en
-            sistemas. Me encanta aprender cosas nuevas y compartir
-            conocimientos.
-        </p>
-        <span
-            class="flex items-center justify-center gap-2 mt-4 text-lg opacity-90 hover:scale-105"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class=""
-            >
-                <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                ></path>
-            </svg>
-            <a
-                href="https://www.google.com.ec/maps/@-0.2077176,-78.4893653,11.75z?hl=es&entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                class="text-xl drop-shadow-[0_0_8px_rgba(0,255,255,0.9)] text-cyan-500"
-                >Quito, Ecuador</a
-            >
-        </span>
-    </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class=""
+      >
+        <path
+          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+        ></path>
+      </svg>
+      <a
+        href="https://www.google.com.ec/maps/@-0.2077176,-78.4893653,11.75z?hl=es&entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        class="text-xl drop-shadow-[0_0_8px_rgba(0,255,255,0.9)] text-cyan-500"
+        >Quito, Ecuador</a
+      >
+    </span>
+  </div>
 
-    <div class="w-2/4 h-full flex flex-col justify-center items-center">
-        <img
-            src="./src/assets/profile.png"
-            alt="Mi foto"
-            class="rounded-2xl w-80 shadow-[0_0_8px_rgba(255,255,255,0.9)]"
-        />
-    </div>
+  <div class="w-2/4 h-full flex flex-col justify-center items-center z-1">
+    <Image
+      src={myImage}
+      alt="Mi foto"
+      class="rounded-2xl w-80 shadow-[0_0_8px_rgba(255,255,255,0.9)]"
+      loading="eager"
+    />
+  </div>
 </div>
