@@ -1,37 +1,63 @@
 ---
-
+const experiencias = [
+  {
+    empresa: "TATOO ADVENTURE GEAR S.A.",
+    fecha: "Mayo - Noviembre (2024)",
+    ubicacion: "Quito - Ecuador",
+    puesto: "Pasante de Tecnología",
+    responsabilidades: [
+      "Ayudé a desarrollar el módulo de marcas para el portal web de administración usando tecnología como PHP, Laravel y Livewire.",
+      "Realicé diversas actividades relacionadas con la administración y mantenimiento del portal web corporativo.",
+      "Brindé soporte técnico a usuarios, resolviendo incidencias y garantizando la continuidad operativa.",
+      "Ejecuté tareas de mantenimiento preventivo y correctivo en equipos de cómputo, asegurando su óptimo funcionamiento.",
+    ],
+  },
+  {
+    empresa: "ECUADORIAN SOFTWARE ESOFT",
+    fecha: "Noviembre - Actualidad (2025)",
+    ubicacion: "Quito - Ecuador",
+    puesto: "Ingeniero de Desarrollo",
+    responsabilidades: [
+      "Desarrollo de funcionalidades backend con .NET.",
+      "Implementación y mantenimiento de componentes frontend.",
+      "Pruebas de calidad (QA) en el software desarrollado por el equipo.",
+      "Colaboración en la optimización y mejora del código existente.",
+    ],
+  },
+];
 ---
 
-<div class="flex flex-col items-center max-w-7xl mx-auto justify-evenly h-[600px]">
-    <h2 class="text-7xl font-[800] text-cyan-400 mb-6 drop-shadow-[0_0_8px_rgba(0,255,255,0.7)]">Habilidades</h2>
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 gap-6 cursor-pointer">
-        <!-- React -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-blue-500 transition duration-300 transform hover:scale-110 fab fa-react"></i>
+<div
+  class="flex flex-col items-center justify-center max-w-7xl mx-auto h-full mb-20"
+>
+  <h2
+    class="text-7xl font-[800] text-cyan-400 mb-20 drop-shadow-[0_0_12px_rgba(0,255,255,1)]"
+  >
+    Experiencia
+  </h2>
+
+  <div class="space-y-8">
+    {
+      experiencias.map((exp) => (
+        <div
+          class="bg-white/10 p-6 rounded-xl shadow-lg w-full max-w-3xl transition-transform transform hover:scale-105
+                    backdrop-blur-md border border-cyan-400/30 hover:border-cyan-400/60
+                    hover:shadow-[0_0_20px_rgba(0,255,255,0.7)]"
+        >
+          <h3 class="text-2xl font-semibold text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.9)]">
+            {exp.empresa}
+          </h3>
+          <p class="text-gray-300 text-sm">
+            {exp.fecha} / {exp.ubicacion}
+          </p>
+          <h4 class="text-lg font-medium text-white mt-3">{exp.puesto}</h4>
+          <ul class="list-disc list-inside text-gray-200 mt-3 space-y-2">
+            {exp.responsabilidades.map((tarea) => (
+              <li>{tarea}</li>
+            ))}
+          </ul>
         </div>
-        <!-- Git -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-orange-500 transition duration-300 transform hover:scale-110 fab fa-git-alt"></i>
-        </div>
-        <!-- GitHub -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-black transition duration-300 transform hover:scale-110 fab fa-github"></i>
-        </div>
-        <!-- Figma -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-purple-500 transition duration-300 transform hover:scale-110 fab fa-figma"></i>
-        </div>
-        <!-- HTML -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-orange-500 transition duration-300 transform hover:scale-110 fab fa-html5"></i>
-        </div>
-        <!-- CSS -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-blue-600 transition duration-300 transform hover:scale-110 fab fa-css3-alt"></i>
-        </div>
-        <!-- JavaScript -->
-        <div class="flex justify-center items-center">
-            <i class="text-7xl text-gray-600 hover:text-yellow-500 transition duration-300 transform hover:scale-110 fab fa-js-square"></i>
-        </div>
-    </div>
+      ))
+    }
+  </div>
 </div>
