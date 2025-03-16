@@ -18,7 +18,7 @@
 
     // Define un array para almacenar las estrellas
     const stars: { x: number; y: number; size: number; speed: number }[] = [];
-    const numStars = 500; // Número de estrellas
+    const numStars = 100; // Número de estrellas
     let scrollY = 0; // Variable para almacenar la posición de desplazamiento vertical
 
     // Función para redimensionar el canvas al tamaño de la ventana
@@ -55,7 +55,7 @@
 
       // Dibuja cada estrella
       for (let star of stars) {
-        ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; // Color de la estrella
+        ctx.fillStyle = "rgba(255, 255, 255, 0.3)"; // Color de la estrella
         ctx.shadowBlur = 4; // Desenfoque de la sombra
         ctx.shadowColor = "white"; // Color de la sombra
         ctx.beginPath();
