@@ -1,0 +1,24 @@
+---
+import Icon from "./Icon.astro";
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="bg-[#162024] transform flex flex-col gap-11 mt-auto px-11 p-8 text-center text-white text-sm [&>p>a]:no-underline [&>p>a]:decoration-current [&>p>a]:hover:focus:decoration-current md:flex-row md:justify-between md:px-20 md:py-12"
+>
+  <div class="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4 md:flex-wrap">
+    <p class="flex items-center gap-2">
+      Designed & Developed in Ecuador with <a href="https://astro.build/"
+        >Astro</a
+      >
+      <Icon icon="rocket-launch" size="1.2em" />
+    </p>
+    <p>&copy; {currentYear} Nicolás Toscano</p>
+  </div>
+  <p class="flex justify-center gap-4 flex-wrap md:justify-end">
+    <a href="https://twitter.com/me"> Twitter</a>
+    <a href="https://github.com/me"> GitHub</a>
+	<a href="https://linkedin.com/in/me"> LinkedIn</a>
+	
+  </p>
+</footer>
