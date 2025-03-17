@@ -1,48 +1,67 @@
-# Astro Starter Kit: Basics
+# 🚀 Proyecto Astro con Tailwind CSS y Vercel  
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este es un proyecto construido con **Astro**, estilizado con **Tailwind CSS**, y desplegado en **Vercel**.  
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🔧 Tecnologías usadas  
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **[Astro](https://astro.build/)** → Framework optimizado para generar sitios estáticos rápidos.  
+- **[Tailwind CSS](https://tailwindcss.com/)** → Framework de utilidades para estilizar rápidamente la UI.  
+- **[Vercel](https://vercel.com/)** → Plataforma para desplegar proyectos de frontend de forma rápida y eficiente.  
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del proyecto  
 
 ```text
 /
-├── public/
+├── public/            # Archivos estáticos
 │   └── favicon.svg
 ├── src/
-│   ├── layouts/
+│   ├── assets/       # SVGs y PNGs
+│   ├── components/    # Componentes reutilizables
+│   ├── layouts/       # Plantillas y componentes de diseño
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/         # Páginas principales del sitio
+│   │   └── index.astro
+│   ├── scripts/       # Script del cuerpo de la página animada
+│   │   └── scroll-reveal.js
+│   └── styles/        # Archivos de estilos adicionales
+├── astro.config.mjs   # Configuración de Astro
+└── package.json       # Dependencias y scripts del proyecto
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Instalación y uso  
 
-## 🧞 Commands
+1️⃣ **Clona el repositorio:**  
+```sh
+git clone https://github.com/nicoToscano/portfolio.git
+cd tu-repo
+```
 
-All commands are run from the root of the project, from a terminal:
+2️⃣ **Instala las dependencias:**  
+```sh
+npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3️⃣ **Ejecuta el servidor en local:**  
+```sh
+npm run dev
+```
 
-## 👀 Want to learn more?
+4️⃣ **Construye la versión de producción:**  
+```sh
+npm run build
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🚀 Despliegue en Vercel  
+
+El proyecto está desplegado en **Vercel**. Puedes hacer deploy fácilmente con el siguiente comando:  
+
+```sh
+npm install -g vercel
+vercel
+```
+
+O puedes conectarlo a **Vercel** a través de la interfaz web en [vercel.com](https://vercel.com).  
+
+## 🌟 Contribuciones  
+
+Si quieres mejorar el proyecto, siéntete libre de hacer un **fork**, crear una rama y hacer un **pull request**.  
