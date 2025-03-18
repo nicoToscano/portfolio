@@ -7,4 +7,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: 'https://nicotoscano.github.io',
+  base: 'portfolio',
+  output: 'static',
 });
