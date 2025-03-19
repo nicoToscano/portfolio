@@ -12,3 +12,13 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+:root {
+    --colorfont: theme('colors.white');
+    --colorgray300: theme('colors.gray.300');
+    --colorcyan500: theme('colors.cyan.500');
+}
+
+
+/* :root.dark-mode{
+} */
