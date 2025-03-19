@@ -1,5 +1,6 @@
 ---
 import Logo from "./LogoComponent.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -27,16 +28,14 @@ const isCurrentPage = (href: string) => {
     <Logo />
 
     <nav
-      class="flex mx-4 px-3 py-2 rounded-full text-sm text-white bg-gradient-to-r from-zinc-800 to-gray-800"
+      class="flex mx-4 px-3 py-2 rounded-full text-sm bg-gradient-to-r from-zinc-800 to-gray-800"
     >
       <ul class="flex gap-5">
         {
           textLinks.map((link) => (
             <li
               class={`rounded-full w-22 h-8 flex items-center justify-center text-sm cursor-pointer ${
-                isCurrentPage(link.href)
-                  ? "bg-cyan-500 text-white"
-                  : "text-gray-300 hover:text-white"
+                isCurrentPage(link.href) ? "currentPage" : "nocurrentPage"
               }`}
             >
               <a href={link.href} class="rounded-full font-bold ">
@@ -49,7 +48,7 @@ const isCurrentPage = (href: string) => {
     </nav>
 
     <nav
-      class="flex gap-4 [&>a>svg]:text-white [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:text-cyan-500 [&>a>svg]:hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] [&>a>svg]:hover:scale-105"
+      class="icon flex gap-4 [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:text-cyan-500 [&>a>svg]:hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] [&>a>svg]:hover:scale-105"
     >
       <a
         href="https://github.com/nicoToscano"
@@ -109,5 +108,32 @@ const isCurrentPage = (href: string) => {
         </svg>
       </a>
     </nav>
+
+    <nav>
+      <ThemeToggle />
+    </nav>
   </div>
 </header>
+
+<style>
+  .landing-header li.currentPage {
+    color: var(--colorfont);
+    background-color: var(--colorcyan500);
+  }
+  .landing-header li.nocurrentPage {
+    color: var(--colorgray300);
+  }
+
+  .landing-header li.nocurrentPage:hover {
+    color: var(--colorfont);
+  }
+
+  .icon a svg {
+    color: var(--colorfont);
+
+    &:hover{
+      color: var(--colorcyan500);
+    }
+  }
+
+</style>
