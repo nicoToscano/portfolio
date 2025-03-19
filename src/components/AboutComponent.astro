@@ -1,8 +1,8 @@
 <div
-  class="fade-in fade-in flex flex-col items-center mx-auto px-10 md:px-10 lg:px-20 xl:px-32 mb-20"
+  class="about fade-in fade-in flex flex-col items-center mx-auto px-10 md:px-10 lg:px-20 xl:px-32 mb-20"
 >
   <h2
-    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] justify-center items-center mb-20"
+    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] justify-center items-center mb-20"
   >
     Sobre mí
   </h2>
@@ -11,16 +11,16 @@
     <div
       class="bg-[#162024] p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transform transition-all duration-300 ease-out hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] hover:scale-[1.03] hover:-rotate-1 animate-fade-in-up"
     >
-      <h3 class="text-2xl font-semibold text-white text-center drop-shadow-md">
+      <h3 class="text-2xl font-semibold text-center drop-shadow-md">
         Experiencia de Voluntariado
       </h3>
-      <p class="text-gray-300 mt-4 font-medium">
+      <h3 class="mt-4 font-medium">
         Instructor en Herramientas Digitales para la Educación
-      </p>
-      <p class="text-gray-300 text-sm text-right mt-1">
+      </h3>
+      <p class="text-sm text-right mt-1">
         Quito, Ecuador | Mayo 2022 - Agosto 2022
       </p>
-      <ul class="text-gray-300 mt-2 text-left text-sm list-disc list-inside">
+      <ul class="mt-2 text-left text-sm list-disc list-inside">
         <li>
           Enseñé herramientas digitales para mejorar las habilidades
           tecnológicas de los docentes.
@@ -36,22 +36,35 @@
     <div
       class="bg-[#162024] p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transform transition-all duration-300 ease-out hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] hover:scale-[1.03] hover:rotate-1 animate-fade-in-up"
     >
-      <h3 class="text-2xl font-semibold text-white text-center drop-shadow-md">
+      <h3 class="text-2xl font-semibold text-center drop-shadow-md">
         Educación
       </h3>
-      <p class="text-gray-300 mt-4 font-medium">Escuela Politécnica Nacional</p>
+      <h3 class=" mt-4 font-medium">Escuela Politécnica Nacional</h3>
       <div class="flex justify-between">
-        <p class="text-gray-300">Ingeniería en Sistemas</p>
-        <p class="text-gray-300 text-sm">Quito, Ecuador | 2025</p>
+        <p class="">Ingeniería en Sistemas</p>
+        <p class=" text-sm">Quito, Ecuador | 2025</p>
       </div>
 
-      <p class="text-gray-300 mt-4 font-medium">
+      <h3 class="mt-4 font-medium">
         Unidad Educativa Municipal Eugenio Espejo
-      </p>
+      </h3>
       <div class="flex justify-between">
-        <p class="text-gray-300">Bachillerato en Ciencias</p>
-        <p class="text-gray-300 text-sm">Quito, Ecuador | 2018</p>
+        <p class="">Bachillerato en Ciencias</p>
+        <p class=" text-sm">Quito, Ecuador | 2018</p>
       </div>
     </div>
   </div>
 </div>
+
+
+<style>
+
+  .about h2, .about h3 {
+    color: var(--colorfont);
+  }
+
+  .about p, .about ul {
+    color: var(--colorgray300);
+  }
+
+</style>
