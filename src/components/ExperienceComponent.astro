@@ -52,7 +52,7 @@ const experiencias = [
           <ul class="mt-4 space-y-2 text-gray-300 text-sm leading-relaxed">
             {exp.responsabilidades.map((tarea, i) => (
               <li class="flex items-start gap-2">
-                <span class="text-white">•</span> {tarea}
+                <span>•</span> {tarea}
               </li>
             ))}
           </ul>
@@ -75,6 +75,14 @@ const experiencias = [
   }
 
   .experience ul {
+    color: var(--colorgray300);
+
+    li span {
+      color: var(--colorgray300);
+    }
+  }  
+
+  .experience p {
     color: var(--colorgray300);
   }
 

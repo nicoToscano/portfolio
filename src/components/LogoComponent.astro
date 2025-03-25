@@ -1,5 +1,5 @@
 <h1
-  class="logo text-xl font-bold text-center flex gap-5 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)] transition duration-300 cursor-pointer"
+  class="logo text-xl font-bold text-center flex gap-5 hover:scale-105 transition duration-300 cursor-pointer"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +18,16 @@
 
 
 <style>
-  .logo{
+  .logo {
     color: var(--colorcyan500);
+
+    &:hover span {
+      text-shadow: 0 0 8px var(--colorcyanshadow);
+    }
+
+    &:hover svg {
+      filter: drop-shadow(0 0 8px var(--colorcyanshadow));
+    }
   }
 
   .name {

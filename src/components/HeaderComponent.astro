@@ -48,7 +48,7 @@ const isCurrentPage = (href: string) => {
     </nav>
 
     <nav
-      class="icon flex gap-4 [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:text-cyan-500 [&>a>svg]:hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] [&>a>svg]:hover:scale-105"
+      class="icon flex gap-4 [&>a>svg]:transition [&>a>svg]:duration-300 [&>a>svg]:ease-in-out [&>a>svg]:hover:scale-105"
     >
       <a
         href="https://github.com/nicoToscano"
@@ -135,8 +135,9 @@ const isCurrentPage = (href: string) => {
   .icon a svg {
     color: var(--colorfont);
 
-    &:hover{
+    &:hover {
       color: var(--colorcyan500);
+      text-shadow: 0 0 8px var(--colorcyanshadow);
     }
   }
 
