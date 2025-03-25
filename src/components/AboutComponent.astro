@@ -2,16 +2,16 @@
   class="about fade-in fade-in flex flex-col items-center mx-auto px-10 md:px-10 lg:px-20 xl:px-32 mb-20"
 >
   <h2
-    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] justify-center items-center mb-20"
+    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] justify-center items-center mb-20"
   >
     Sobre mí
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+  <div class="contenedor grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
     <div
-      class="bg-[#162024] p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transform transition-all duration-300 ease-out hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] hover:scale-[1.03] hover:-rotate-1 animate-fade-in-up"
+      class="p-8 md:p-10 rounded-2xl transform transition-all duration-300 ease-out hover:scale-[1.03] hover:-rotate-1"
     >
-      <h3 class="text-2xl font-semibold text-center drop-shadow-md">
+      <h3 class="text-2xl font-semibold text-center">
         Experiencia de Voluntariado
       </h3>
       <h3 class="mt-4 font-medium">
@@ -34,14 +34,14 @@
     </div>
 
     <div
-      class="bg-[#162024] p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transform transition-all duration-300 ease-out hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] hover:scale-[1.03] hover:rotate-1 animate-fade-in-up"
+      class="p-8 md:p-10 rounded-2xl transform transition-all duration-300 ease-out hover:scale-[1.03] hover:rotate-1"
     >
-      <h3 class="text-2xl font-semibold text-center drop-shadow-md">
+      <h3 class="text-2xl font-semibold text-center">
         Educación
       </h3>
       <h3 class=" mt-4 font-medium">Escuela Politécnica Nacional</h3>
       <div class="flex justify-between">
-        <p class="">Ingeniería en Software</p>
+        <p class="">Ingeniería de Software</p>
         <p class=" text-sm">Quito, Ecuador | 2024</p>
       </div>
 
@@ -63,8 +63,21 @@
     color: var(--colorfont);
   }
 
+  .about h2 {
+    text-shadow: 0 0 8px var(--colorwhiteshadow);
+  }
+
   .about p, .about ul {
     color: var(--colorgray300);
   }
 
+  .contenedor > div {
+    background-color: var(--colorbackground);
+    border: 1px solid var(--colorborder);
+  }
+
+  .contenedor > div:hover {
+    box-shadow: 0 0 15px var(--shadowborder);
+  }
+  
 </style>

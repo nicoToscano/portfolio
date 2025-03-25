@@ -28,18 +28,18 @@ const experiencias = [
 ---
 
 <div
-  class="fade-in flex flex-col items-center mx-auto px-10 md:px-10 lg:px-20 xl:px-32 mb-20"
+  class="experience fade-in flex flex-col items-center mx-auto px-10 md:px-10 lg:px-20 xl:px-32 mb-20"
 >
   <h2
-    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] justify-center items-center mb-20"
+    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[800] justify-center items-center mb-20"
   >
     Experiencia
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+  <div class="contenedor grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
     {
       experiencias.map((exp) => (
-        <div class="bg-[#162024] p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transition-transform transform hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+        <div class="p-8 md:p-10 rounded-2xl border border-white/30 shadow-lg transform transition-all duration-300 ease-out hover:scale-[1.03] hover:-rotate-1">
           <h3 class="text-2xl font-semibold text-white text-center drop-shadow-md">
             {exp.empresa}
           </h3>
@@ -61,3 +61,29 @@ const experiencias = [
     }
   </div>
 </div>
+
+
+<style>
+
+  .experience h2 {
+    color: var(--colorfont);
+    text-shadow: 0 0 8px var(--colorwhiteshadow);
+  }
+
+  .experience h3, .experience h4 {
+    color: var(--colorfont);
+  }
+
+  .experience ul {
+    color: var(--colorgray300);
+  }
+
+  .contenedor > div {
+    background-color: var(--colorbackground);
+    border: 1px solid var(--colorborder);
+  }
+
+  .contenedor > div:hover {
+    box-shadow: 0 0 15px var(--shadowborder);
+  }
+</style>

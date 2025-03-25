@@ -1,8 +1,8 @@
 <div class="fade-in flex flex-col sm:flex-row items-center justify-center max-w-7xl mx-auto h-[500px] pt-20 sm:pt-60 mb-20 w-full">
-  <div class=" flex flex-col justify-center w-full h-full text-center text-white ">
-    <h1 class="hover:cursor-pointer font-[800] text-5xl sm:text-7xl">
+  <div class="me flex flex-col justify-center w-full h-full text-center">
+    <h1 class="font-[800] text-5xl sm:text-7xl">
       Hola, soy <span
-        class="text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.7)]"
+        class=""
         >Nicolás</span
       >.
     </h1>
@@ -24,13 +24,38 @@
       <a
         href="https://www.google.com.ec/maps/@-0.2077176,-78.4893653,11.75z?hl=es&entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D"
         target="_blank"
-        class="text-xl drop-shadow-[0_0_8px_rgba(0,255,255,0.9)] text-cyan-500"
+        class="text-xl"
         >Quito, Ecuador</a
       >
     </span>
   </div>
 
-  <div class="w-2/4 h-full flex flex-col justify-center items-center z-1">
-    <img src="/portfolio/profile.png" class="rounded-full w-80 shadow-[0_0_8px_rgba(255,255,255,0.9)]" alt="">
+  <div class="profile w-2/4 h-full flex flex-col justify-center items-center z-1">
+    <img src="/portfolio/profile.png" class="rounded-full w-80" alt="">
   </div>
 </div>
+
+<style>
+  .me {
+    color: var(--colorfont);
+  }
+
+  .me h1 {
+    cursor: pointer;
+  }
+
+  .me h1 span {
+    color: var(--colorcyan500);
+    text-shadow: 0 0 8px var(--colorcyanshadow);
+  }
+
+  .me span a {
+    color: var(--colorcyan500);
+    text-shadow: 0 0 8px var(--colorcyanshadow);
+  }
+
+  .profile img {
+    box-shadow: 0 0 9px var(--colorwhiteshadow);
+  }
+
+</style>

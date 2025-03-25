@@ -15,8 +15,37 @@
 
 :root {
     --colorfont: theme('colors.white');
-    --colorgray300: theme('colors.gray.300');
+    --colorgray300: theme('colors.gray.400');
     --colorcyan500: theme('colors.cyan.500');
+    --colorwhiteshadow: theme('colors.white');
+    --colorcyanshadow: theme('colors.cyan.400');
+    --colorborder: theme('colors.white / 30%');
+    --shadowborder: theme('colors.white / 10%');
+    --colorbackground: #162024;
+    --colorbutton: #1f2d3d;
+
+    /* Hover colors */
+    --colorhoverreact: theme('colors.cyan.600');
+    --colorhoverastro1: theme('colors.white');
+    --colorhoverastro2: theme('colors.pink.300');
+    --colorhovertailwind: theme('colors.cyan.400');
+    --colorhoverhmtl: theme('colors.orange.500');
+    --colorhovercss: theme('colors.blue.600');
+    --colorhoverjs: theme('colors.yellow.500');
+    --colorhoverjava: theme('colors.red.500');
+    --colorhovercmas: theme('colors.blue.500');
+    --colorhovercsharp: theme('colors.purple.500');
+    --colorhovergit: theme('colors.orange.500');
+    --colorhovergithub: theme('colors.black');
+    --colorhoverfigma: theme('colors.purple.500');
+    --colorhoversql: theme('colors.yellow.300');
+    --colorhoverscrum: theme('colors.green.400');
+    --colorhovernet: theme('colors.purple.600');
+
+    /* Canvas colors */
+    --fillcolor: theme('colors.white / 30%');
+    --shadowcolor: theme('colors.white');
+
 }
 
 

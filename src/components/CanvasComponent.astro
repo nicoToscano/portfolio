@@ -55,9 +55,9 @@
 
       // Dibuja cada estrella
       for (let star of stars) {
-        ctx.fillStyle = "rgba(255, 255, 255, 0.3)"; // Color de la estrella
+        ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--fillcolor').trim(); // Color de la estrella
         ctx.shadowBlur = 4; // Desenfoque de la sombra
-        ctx.shadowColor = "white"; // Color de la sombra
+        ctx.shadowColor = getComputedStyle(document.documentElement).getPropertyValue('--shadowcolor').trim();  // Color de la sombra
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2); // Dibuja un círculo para la estrella
         ctx.fill();
