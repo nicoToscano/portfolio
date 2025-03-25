@@ -14,6 +14,42 @@
 }
 
 :root {
+    --colorfont: #5B4636;
+    --colorgray300: #8B6F58;
+    --colorcyan500: #C9A66B;
+    --colorwhiteshadow: #E8D5B7;
+    --colorcyanshadow: #B88655;
+    --colorborder: rgba(91, 70, 54, 0.3);
+    --shadowborder: rgba(91, 70, 54, 0.1);
+    --colorbackground: #F4E8D5;
+    --colorbackground2: #E8D5B7;
+    --colorbutton: #D8BFAA;
+
+    /* Hover colors */
+    --colorhoverreact: theme('colors.cyan.500');
+    --colorhoverastro1: theme('colors.black');
+    --colorhoverastro2: theme('colors.pink.500');
+    --colorhovertailwind: theme('colors.cyan.500');
+    --colorhoverhmtl: theme('colors.orange.600');
+    --colorhovercss: theme('colors.blue.500');
+    --colorhoverjs: theme('colors.yellow.600');
+    --colorhoverjava: theme('colors.red.600');
+    --colorhovercmas: theme('colors.blue.600');
+    --colorhovercsharp: theme('colors.purple.600');
+    --colorhovergit: theme('colors.orange.600');
+    --colorhovergithub: theme('colors.gray.900');
+    --colorhoverfigma: theme('colors.purple.600');
+    --colorhoversql: theme('colors.yellow.400');
+    --colorhoverscrum: theme('colors.green.500');
+    --colorhovernet: theme('colors.purple.700');
+
+    /* Canvas colors */
+    --fillcolor: rgba(91, 70, 54, 0.3);
+    --shadowcolor: #5B4636;
+}
+
+:root.dark-mode{
+
     --colorfont: theme('colors.white');
     --colorgray300: theme('colors.gray.400');
     --colorcyan500: theme('colors.cyan.500');
@@ -22,6 +58,7 @@
     --colorborder: theme('colors.white / 30%');
     --shadowborder: theme('colors.white / 10%');
     --colorbackground: #162024;
+    --colorbackground2: #0B1012;
     --colorbutton: #1f2d3d;
 
     /* Hover colors */
@@ -45,9 +82,4 @@
     /* Canvas colors */
     --fillcolor: theme('colors.white / 30%');
     --shadowcolor: theme('colors.white');
-
 }
-
-
-/* :root.dark-mode{
-} */

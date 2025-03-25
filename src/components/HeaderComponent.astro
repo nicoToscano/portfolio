@@ -28,7 +28,7 @@ const isCurrentPage = (href: string) => {
     <Logo />
 
     <nav
-      class="flex mx-4 px-3 py-2 rounded-full text-sm bg-gradient-to-r from-zinc-800 to-gray-800"
+      class="flex mx-4 px-3 py-2 rounded-full text-sm"
     >
       <ul class="flex gap-5">
         {
@@ -126,6 +126,10 @@ const isCurrentPage = (href: string) => {
 
   .landing-header li.nocurrentPage:hover {
     color: var(--colorfont);
+  }
+
+  .landing-header nav:first-of-type {
+    background: var(--colorbackground2);
   }
 
   .icon a svg {
