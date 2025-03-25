@@ -16,8 +16,8 @@ import Icon from './Icon.astro';
 		border: 0;
 		border-radius: 999rem;
 		padding: 0;
-		background-color: white;
-		box-shadow: inset 0 0 0 1px darkblue;
+		background-color: var(--colorbackground2);
+		box-shadow: inset 0 0 0 1px var(--colorfont);
 		cursor: pointer;
 	}
 
@@ -29,7 +29,7 @@ import Icon from './Icon.astro';
 		width: 2rem;
 		height: 2rem;
 		font-size: 1rem;
-		color: white;
+		color: var(--colorfont);
 	}
 
 	.icon.light::before {
@@ -37,7 +37,7 @@ import Icon from './Icon.astro';
 		z-index: -1;
 		position: absolute;
 		inset: 0;
-		background-color: purple;
+		background-color: var(--colorcyan500);
 		border-radius: 999rem;
 	}
 
@@ -47,8 +47,8 @@ import Icon from './Icon.astro';
 
 	:global(.dark-mode) .icon.dark,
 	:global(html:not(.dark-mode)) .icon.light,
-	button[aria-pressed='false'] .icon.light {
-		color: orange;
+	button[aria-pressed='true'] .icon.light {
+		color: var(--colorfont);
 	}
 
 
