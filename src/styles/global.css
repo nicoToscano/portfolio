@@ -14,10 +14,10 @@
 }
 
 :root {
-    --colorfont: #3E563F;
+    --colorfont: #607e62;
     --colorgray300: #A2B9A8;
     --colorcyan500: #82C882;
-    --colorwhiteshadow: #82C882;
+    --colorwhiteshadow: #F1F8E9;
     --colorcyanshadow: #C1DABF;
     --colorborder: rgba(62, 86, 63, 0.3);
     --shadowborder: rgba(62, 86, 63, 0.1);

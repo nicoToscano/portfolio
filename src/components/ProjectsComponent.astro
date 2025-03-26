@@ -5,6 +5,7 @@ const projects = [
     description:
       "Desarrollo de una tienda con carrito de compras y pago integrado.",
     image: "/portfolio/tesla.png",
+    tecnologias: ["Astro", "TailwindCSS"],
     link: "https://nicotoscano.github.io/tesla/",
   },
   {
@@ -12,6 +13,7 @@ const projects = [
     description:
       "Un dashboard para gestionar usuarios y productos con estadísticas.",
     image: "/portfolio/coffee.png",
+    tecnologias: ["Html", "Css", "Javascript"],
     link: "https://nicotoscano.github.io/CoffeeShop/",
   },
 ];
@@ -29,14 +31,21 @@ const projects = [
   <div class="contenedor grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
     {
       projects.map((project) => (
-        <div class="p-8 md:p-10 rounded-2xl transition-transform transform">
+        <div class="hover:scale-105 p-8 md:p-10 rounded-2xl transition-transform transform">
           <a
             href={project.link}
-            class="block rounded-xl transition-transform hover:scale-105" target="_blank"
+            class="block rounded-xl transition-transform" target="_blank"
           >
             <img src={project.image} class="w-full h-48 object-cover rounded-lg mb-4" alt={project.description} />
             <h3 class="text-xl font-semibold">{project.title}</h3>
             <p class="text-gray-300 text-sm">{project.description}</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {project.tecnologias.map((tecnologia) => (
+              <span class="tech px-2 py-1 rounded text-white text-sm">
+                {tecnologia}
+              </span>
+              ))}
+            </div>
           </a>
         </div>
       ))
@@ -59,6 +68,13 @@ const projects = [
   .contenedor > div {
     background-color: var(--colorbackground);
     border: 1px solid var(--colorborder);
+
+  }
+
+  .contenedor .tech {
+    font-weight: 700;
+    color: var(--colorfont);
+    background-color: var(--colorbutton);
   }
 
   .contenedor h3 {
