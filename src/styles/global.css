@@ -14,16 +14,16 @@
 }
 
 :root {
-    --colorfont: #5B4636;
-    --colorgray300: #8B6F58;
-    --colorcyan500: #C9A66B;
-    --colorwhiteshadow: #E8D5B7;
-    --colorcyanshadow: #B88655;
-    --colorborder: rgba(91, 70, 54, 0.3);
-    --shadowborder: rgba(91, 70, 54, 0.1);
-    --colorbackground: #F4E8D5;
-    --colorbackground2: #E8D5B7;
-    --colorbutton: #D8BFAA;
+    --colorfont: #3E563F;
+    --colorgray300: #A2B9A8;
+    --colorcyan500: #82C882;
+    --colorwhiteshadow: #82C882;
+    --colorcyanshadow: #C1DABF;
+    --colorborder: rgba(62, 86, 63, 0.3);
+    --shadowborder: rgba(62, 86, 63, 0.1);
+    --colorbackground: #FAF8F1;
+    --colorbackground2: #EDEDE9;
+    --colorbutton: #A8D5BA;
 
     /* Hover colors */
     --colorhoverreact: theme('colors.cyan.500');
@@ -44,8 +44,8 @@
     --colorhovernet: theme('colors.purple.700');
 
     /* Canvas colors */
-    --fillcolor: rgba(91, 70, 54, 0.3);
-    --shadowcolor: #5B4636;
+    --fillcolor: rgba(130, 200, 130, 0.3);
+    --shadowcolor: #82C882;
 }
 
 :root.dark-mode{
