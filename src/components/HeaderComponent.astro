@@ -1,14 +1,15 @@
 ---
 import Logo from "./LogoComponent.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import Icon from './Icon.astro';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "Inicio", href: "/" },
-  { label: "Sobre mí", href: "/about/" },
-  { label: "Experiencia", href: "/experience/" },
-  { label: "Proyectos", href: "/projects/" },
-  { label: "Contacto", href: "/contact/" },
+  { label: "Inicio", href: "/portfolio" },
+  { label: "Educación", href: "#education" },
+  { label: "Experiencia", href: "#experience" },
+  { label: "Proyectos", href: "#projects" },
+  { label: "Contacto", href: "#contact" },
 ];
 
 /** Test if a link is pointing to the current page. */
@@ -114,14 +115,14 @@ const isCurrentPage = (href: string) => {
     </nav>
 
     <nav class="flex md:hidden text-3xl focus:outline-none">
-      <button id="menu-toggle">☰</button>
+      <button id="menu-toggle"><Icon icon="list" /></button>
     </nav>
 
     <nav
       id="mobile-menu"
       class="hidden md:hidden absolute top-full left-0 w-screen h-screen flex-col z-50 "
     >
-      <ul class="space-y-8 text-xl font-bold pl-10 py-8">
+      <ul class="options space-y-8 text-xl font-bold pl-10 py-8">
         {
           textLinks.map((link) => (
             <li>
@@ -205,9 +206,19 @@ const isCurrentPage = (href: string) => {
         const mobileMenu = document.getElementById(
           "mobile-menu"
         ) as HTMLElement;
+        const option = document.querySelectorAll(".options li a");
+        const landing = document.getElementById("header") as HTMLElement;;
+
         menuToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("hidden");          
           document.body.classList.toggle("no-scrollbar");
+          landing.classList.toggle("menuopen");
+          option.forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("hidden");
+              document.body.classList.remove("no-scrollbar");
+            });
+          });
         });
       });
     </script>
@@ -229,6 +240,10 @@ const isCurrentPage = (href: string) => {
 
   .landing-header .navlinks{
     background: var(--colorbackground2);
+  }
+
+  .landing-header.menuopen {
+    background: var(--colorbackground);
   }
 
   .icon a svg {
