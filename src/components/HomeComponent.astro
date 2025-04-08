@@ -1,5 +1,5 @@
 <div class="fade-in flex flex-col sm:flex-row items-center justify-center max-w-7xl mx-auto h-[500px] pt-20 sm:pt-60 mb-20 w-full">
-  <div class="me flex flex-col justify-center w-full h-full text-center">
+  <div class="inline-block me flex flex-col justify-center w-full h-full text-center">
     <h1 class="font-[800] text-5xl sm:text-7xl">
       Hola, soy <span
         class=""
@@ -28,6 +28,14 @@
         >Quito, Ecuador</a
       >
     </span>
+
+    <a
+      href="https://drive.google.com/file/d/1ypj-IFhzNkG5AUHTCRTyKqPnEfCS_x2B/view?usp=drive_link"
+      class="button inline-block mt-6 px-6 py-3 font-bold rounded-lg transition duration-300"
+      target="_blank"
+    >
+      Descargar CV
+    </a>
   </div>
 
   <div class="profile w-2/4 h-full flex flex-col justify-center items-center z-1">
@@ -51,6 +59,18 @@
 
   .me span a {
     color: var(--colorcyan500);
+    text-shadow: 0 0 8px var(--colorcyanshadow);
+  }
+
+  .me .button {
+    background: var(--colorcyan500);
+    color: var(--colorfont);
+    text-shadow: 0 0 8px var(--colorcyanshadow);
+  }
+
+  .me .button:hover {
+    background: var(--colorhoverreact);
+    color: var(--colorfont);
     text-shadow: 0 0 8px var(--colorcyanshadow);
   }
 
